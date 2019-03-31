@@ -18,7 +18,7 @@
         document.getElementById("ocr_out").innerHTML = this.responseText;
       }
     }
-    var url = "http://13.55.116.226:8000/api/medical/ocr/";
+    var url = "http://13.55.116.226/api/medical/ocr/";
     var mystring=document.getElementById("template_name").value;
     var fileLoader=document.getElementById("jsonFile0");
     var myfile = fileLoader.files[0]
@@ -36,7 +36,7 @@
         document.getElementById("new").innerHTML = this.responseText;
       }
     }
-    var url = "http://13.55.116.226:8000/api/medical/sticker/";
+    var url = "http://13.55.116.226/api/medical/sticker/";
     var mystring=document.getElementById("new_name").value;
     var fileLoader=document.getElementById("jsonFile1");
     var myfile = fileLoader.files[0]
@@ -54,7 +54,7 @@
         document.getElementById("update").innerHTML = this.responseText;
       }
     }
-    var url = "http://13.55.116.226:8000/api/medical/sticker/";
+    var url = "http://13.55.116.226/api/medical/sticker/";
     var mystring=document.getElementById("update_name").value;
     var fileLoader=document.getElementById("jsonFile2");
     var myfile = fileLoader.files[0]
@@ -72,7 +72,7 @@
         document.getElementById("selected").innerHTML = this.responseText;
       }
     };
-    var url = "http://13.55.116.226:8000/api/medical/sticker/";
+    var url = "http://13.55.116.226/api/medical/sticker/";
     var mystring=document.getElementById("sel_name").value;
     url = url + mystring;
     xhttp.open("GET", url, true);
@@ -86,7 +86,7 @@
         document.getElementById("allStickers").innerHTML = this.responseText;
       }
     };
-    var url = "http://13.55.116.226:8000/api/medical/sticker/";
+    var url = "http://13.55.116.226/api/medical/sticker/";
     xhttp.open("GET", url, true);
     xhttp.send();
   };  
@@ -98,7 +98,7 @@
         document.getElementById("deleted").innerHTML = this.responseText;
       }
     };
-    var url = "http://13.55.116.226:8000/api/medical/sticker/";
+    var url = "http://13.55.116.226/api/medical/sticker/";
     var mystring=document.getElementById("del_name").value;
     url = url + mystring;
     xhttp.open("DELETE", url, true);
