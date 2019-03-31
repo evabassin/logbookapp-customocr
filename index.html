@@ -14,7 +14,7 @@
   function ocr(){    
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
+      if (this.readyState == 4) {       
         document.getElementById("ocr_out").innerHTML = this.responseText;
       }
     }
@@ -32,7 +32,7 @@
   function newTemplate(){    
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
+      if (this.readyState == 4 ) {
         document.getElementById("new").innerHTML = this.responseText;
       }
     }
@@ -50,7 +50,7 @@
   function updateTemplate(){    
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
+      if (this.readyState == 4 ) {
         document.getElementById("update").innerHTML = this.responseText;
       }
     }
@@ -68,7 +68,7 @@
   function selectTemplate(){    
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
+      if (this.readyState == 4 ) {
         document.getElementById("selected").innerHTML = this.responseText;
       }
     };
@@ -82,7 +82,7 @@
   function getAllStickers(){  
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
+      if (this.readyState == 4 ) {
         document.getElementById("allStickers").innerHTML = this.responseText;
       }
     };
@@ -94,7 +94,7 @@
   function delTemplate(){    
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
+      if (this.readyState == 4 ) {
         document.getElementById("deleted").innerHTML = this.responseText;
       }
     };
@@ -204,6 +204,8 @@
   <p>Template Name:  <input type="text" id="del_name" name="template_name" value="e.g. rnsh"/><br/><br>
   <input type="button" value="Submit" onclick="delTemplate()">  
 </form>  
+<p>Output: </p><p id="deleted"></p>
+<br>
 <br>
 <!-- End delete template by name -->
 
@@ -217,88 +219,6 @@
 <br>
 <br>
 <!-- Select delete template by name -->
-
-
-
-
-
-
-
-
-
-  <!-- Something Cool -->
-  <!-- <p><strong>Make Template: </strong> </p>
-  <input type="text" id="t_name" name="template_name" value="Template name"> <br><br>
-  
-  <button type="button" onclick="newTemplate()">Make Template</button>
-
-  <p id="demo"></p> -->
- 
-
-
-<!-- <form class="searchPodcast" action="http://api.curiohhapp.com/v1/listenNotesSearch/" method=post enctype=multipart/form-data>
-    <p><strong>Make Template: </strong> </p>
-      <p>Template Name: <input type="text" id="t_name" name="template_name"> <br><br>
-      <p>Choose JSON File <input type="file" name=region_json>  <br><br>
-      <input type="submit" value=Create>
-  </form>
-  <br>
-  <br> -->
-
-
-
-
-
-  <!-- End Something Cool -->
-
-  <form class="NewStickerTemplate" action="http://127.0.0.1:8000/api/medical/sticker" method="POST" enctype=multipart/form-data>
-    <p><strong>Create Sticker Template: </strong> </p>
-      <p>Template Name:  <input type="text" name=template_name value="e.g. rnsh"> <br><br>
-      <p>Choose JSON File <input type="file" name=region_json>  <br><br>
-      <input type="submit" value=Create>
-  </form>
-  <br>
-  <br>
-  <form class="UpdateStickerTemplate" action="http://atomiccx.co/api/medical/updatesticker" method=post enctype=multipart/form-data>
-    <p><strong>Update Sticker Template: </strong> </p>
-      <p>Template Name to update:  <input type="text" name=template_name value="e.g. rnsh"> <br><br>
-      <p>New JSON File <input type="file" name=region_json>  <br><br>
-      <input type="submit" value=Update>
-  </form>
-  <br>
-  <br>
-  <form class="DeleteStickerTemplate" action="http://atomiccx.co/api/medical/deletesticker" method=post enctype=multipart/form-data>
-    <p><strong>Delete Sticker Template: </strong> </p>
-      <p>Template Name to Delete:  <input type="text" name=template_name value="e.g. rnsh"> <br><br>
-      <input type="submit" value=Delete>
-  </form>
-  <br>
-  <br>
-  <form class="SelectStickerTemplate" action="http://atomiccx.co/api/medical/selectsticker" method=post enctype=multipart/form-data>
-    <p><strong>Select Sticker Template: </strong> </p>
-      <p>Template Name to Select:  <input type="text" name=template_name value="e.g. rnsh"> <br><br>
-      <input type="submit" value=Select>
-  </form>
-  <br>
-  <br>
-  <form class="NewStickerFromExisting" action="http://atomiccx.co/api/medical/newstickerfromexisting" method=post enctype=multipart/form-data>
-    <p><strong>Create New Sticker Template From Existing: </strong> </p>
-      <p>Existing sticker template:  <input type="text" name=existing_template_name value="e.g. rnsh"> <br><br>
-      <p>New sticker template name:  <input type="text" name=new_template_name value="e.g. gosford"> <br><br>
-      <input type="submit" value=Create>
-  </form>
-  <br>
-  <br>
-  <form class="SelectAllTemplates" action="http://atomiccx.co/api/medical/selectall" method=get enctype=multipart/form-data>
-    <p><strong>Select All Sticker Templates: </strong> </p>
-      <input type="submit" value=Select>
-  </form>
-  <br>
-  <br>
-  <br>
-  <br>
-
-
 
 
 </body>
